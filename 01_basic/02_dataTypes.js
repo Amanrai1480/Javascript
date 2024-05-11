@@ -13,7 +13,7 @@ console.log(typeof undefined);  //undefined
           
           //primitive data types:
 //number => 2 to power 53
-//bigint
+//Bigint
 //string => ""
 //boolean => true/false
 //null => standalone value
