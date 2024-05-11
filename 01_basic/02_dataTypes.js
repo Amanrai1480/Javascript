@@ -36,3 +36,25 @@ console.log(typeof undefined);  //undefined
   let myfun=function(){
     console.log("hello World");
   }
+
+  // ***************memory**********************************
+   //stack(primitive)
+   //all primitive data goes in the stack and their copy will be shared among the variables
+   //eg
+   let myName="aman"
+   let anotherName=myName
+   anotherName="abhi"
+   console.log(myName);   //aman
+   console.log(anotherName);//abhi
+
+   //heap(non-primitive)
+   //in non-primitive, data stored in heap and their references is shared among variables
+
+   let userOne={
+    email:"aman@123.com",
+    upi:"aman@ybl",
+   }
+   let userTwo=userOne
+   userTwo.email="abhi@123"
+   console.log(userOne.email);
+   console.log(userTwo.email);
