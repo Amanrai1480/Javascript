@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+</head>
+<body style="background-color: black; color:white">
+    
+</body>
+<script>
+    //1* creating element
+    let div=document.createElement("div")
+    //console.log(div);
+    div.className="main"
+    div.id="first"
+    div.setAttribute("title","div-title")
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+    div.innerText="hello Aman"
+    // const addText=document.createTextNode("helloAman")
+    // div.appendChild(addText)
+    document.body.appendChild(div)//*****
+
+
+    let el=document.createElement("div")
+    el.innerText="new div"
+    div.append(el)//element will add (inside) node div but at the end.
+    div.prepend(el)//element will add (inside) node div but at the starting.
+
+    // const btn=document.createElement("button")
+    // btn.innerText="click me"
+    // btn.style.backgroundColor="red"
+    // div.before(btn)//it will add before the node(outside)
+
+    const btn=document.createElement("button")
+    btn.innerText="click me"
+    btn.style.backgroundColor="red"
+    div.after(btn)//it will add after the node(outside)
+
+
+    // ******classList**********************
+    //similar to setAttribute but in setAttribute new class overwrite the previous class 
+    //while in classList both class present
+    const getDiv=document.querySelector("div")
+    console.log(getDiv);
+    getDiv.classList.add("newClass")
+   console.log(getDiv.getAttribute("class"))
+   getDiv.classList.remove("main")
+   console.log(getDiv.getAttribute("class"))
+
+</script>
+</html>
