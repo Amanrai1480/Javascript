@@ -1,0 +1,47 @@
+--->The change in the state of any object is known as event
+
+Event object  ==>
+---------------
+Sometimes, inside an event handler function, you'll see a parameter specified with a name such as event, evt, or e. This is called the event object, and it is automatically passed to event handlers to provide extra features and information.
+
+event properties:-
+event.taregt:- The target property of the event object is always a reference to the element the event occurred upon
+e.type, e.clientX, e.clientY  etc
+
+
+inline event handling
+-------------------------
+<body>
+   <button onclick="console.log("button clicked")">
+     click me
+   </button>
+</body>
+
+event handling in js
+-----------------------
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.onclick = () => {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+};
+
+if we handle event by inline or js the priority is of js handling...
+
+
+eventListener ------>
+----------------
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener("click", () => {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
