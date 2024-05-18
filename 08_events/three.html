@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>setInterval()</h1>
+    <button id="start">start</button>
+    <button id="stop">stoped</button>
+    
+</body>
+<script>
+    // const fun=function(){
+    //    //console.log("hello aman"); 
+    // }
+    // setInterval(fun,2000)
+
+    // problem--> we have given two buttons start and stop if we click start then printing start of setinterval if we click stop then the printing will stop.
+    
+    const fun=function(str){
+       console.log(str+"hello aman"); 
+    }
+    // setInterval(fun,2000,"hyy ")
+
+ let result;
+ function start(){
+    document.querySelector("#start").addEventListener("click",function(){
+    console.log("start clciked");
+    result=setInterval(fun,2000,"hello ")
+})
+ }
+
+ function stop(){
+    document.querySelector("#stop").addEventListener("click",function(){
+    console.log("stop clicked");
+    clearInterval(result)
+}) 
+ }
+ start()
+ stop()
+  
+
+</script>
+</html>
