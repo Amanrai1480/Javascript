@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sync</title>
+</head>
+<body>
+    <h1>sync or async</h1>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+    // ***********setTimeout()***************
+    // setTimeout(function(){
+    //     console.log("hlw aman");
+    // },2000)
+
+//     const btn=document.querySelector("#stop")
+//     btn.addEventListener("click",function(e){
+//     e.preventDefault();
+//     console.log("hyy")
+//    setTimeout(function(){
+//         console.log("hlw aman");
+//     },5000)
+//     })
+
+// *********clearTimeout()***********************
+console.log(document.querySelector("h1").innerText);
+const changeInnerHtml=function(){
+    document.querySelector("h1").
+    innerHTML="hello name change";
+}
+const setTO=setTimeout(changeInnerHtml,2000)
+
+const btn=document.querySelector("#stop")
+btn.addEventListener("click",function(){
+    clearTimeout(setTO)
+    console.log("name changing stoped");
+})
+
+
+    
+</script>
+</html>
