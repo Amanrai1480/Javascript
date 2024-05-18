@@ -1,0 +1,25 @@
+Javascript is a synchronous language(by default)
+Synchronous:--
+ means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+Javascript is single threaded.
+Execute one line of a code at a time.
+Each operation waits for the last one to complete before executing.
+
+Asynchronous:--
+Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI. Asynchronouscode execution code allows to Execute next instructions immediately and doesnt block the flow.
+
+Blocking code     vs    Non-Blocking code
+--------------         --------------------
+block the flow of      doesnt block the 
+ program.              execution
+(read file sync)        (read file async)
+
+**async await >> promise chains >> callback hell
+-------------------------------------------------
+these below are not core Javascript function, as they are window function in browser
+
+1)setTimeout(handler,time)//hander is a callback without name
+setTimeout(function(){
+    console.log("hii");
+},200)
+setTimeout():--it Executes a function and we decide when to execute a function.
