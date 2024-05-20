@@ -26,13 +26,13 @@
 //     return this
 // }
 
-// const userOne =  User("aman", 12, true)
+// const userOne = new User("aman", 12, true)
 // const userTwo = new User("rai", 11, false)
 // console.log(userOne);
 //console.log(userTwo);
 //their is a prblm in the above code as as userTwo rewrite the userOne because they both share same memory address to solve this prblm we use new keyword
 
-// ******************construction********************
+// **************************************
 
 
 function User(username,age,roll){
@@ -68,6 +68,9 @@ function Car(make, model, year) {
   
   console.log(auto instanceof Object);
   // Expected output: true
+
+// ***************actually in js the constructor is given through the new keyword not with the classes
+//but to ease for the developers who come from c++, etc the prgrm wrap in the classes
 
 
  // The constructor method is a special method of a class for creating and initializing an object instance of that class.
