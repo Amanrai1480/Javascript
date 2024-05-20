@@ -27,6 +27,10 @@ async function asyncCall(){
 asyncCall()
 
 
+//AJAX;_Asynchronous javascript and xml
+//json:--javascript object notation
+//.json() method convert the json format into JS object
+
 // async function getData(){
 //   try {
 //     const response=await fetch('https://jsonplaceholder.typicode.com/users');
@@ -39,18 +43,6 @@ asyncCall()
 // getData()
 
 
-
-
-fetch('https://jsonplaceholder.typicode.com/users')
-.then(function(response){
-return response.json()
-})
-.then((data)=>{
-console.log(data);
-})
-.catch((error)=>{
-console.log(error);
-})
 
 
 
