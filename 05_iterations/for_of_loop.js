@@ -42,3 +42,6 @@ const myObject = {
 //     console.log(key, ':-', value);
     
 // }
+for(const [key,value] of Object.entries(myObject)){
+    console.log(`key is ${key} and value is ${value}`
+                }
